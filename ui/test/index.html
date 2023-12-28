@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API POST Request Example</title>
+</head>
+<body>
+
+    <h1>API POST Request Example</h1>
+
+    <button onclick="postData()">Create Post</button>
+
+    <div id="output"></div>
+
+    <script>
+        async function postData() {
+            try {
+                const url = 'https://jsonplaceholder.typicode.com/posts'; // Example URL from JSONPlaceholder
+
+                const postPayload = {
+                    title: 'New Post',
+                    body: 'This is the body of the new post.',
+                    userId: 1
+                };
+
+                const requestOptions = {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(postPayload),
+                };
+
+                const response = await fetch(url, requestOptions);
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                // Display the response in the 'output' div
+                document.getElementById('output').innerHTML = JSON.stringify(data, null, 2);
+            } catch (error) {
+                console.error('Error:', error);
+                // Display an error message in the 'output' div
+                document.getElementById('output').innerHTML = 'Error creating post';
+            }
+        }
+    </script>
+
+</body>
+</html>
