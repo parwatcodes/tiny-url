@@ -4,25 +4,34 @@
 
 <head>
   <link rel="stylesheet" type="text/css" href="./styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
   <script src="./script.js"></script>
 </head>
 
 <body>
-  <div class="main-content">
-    <div>
-      <h1>Shorten your Loooong Links :)</h1>
+  <div class="container">
+    <div id="content-1">
+      <div>
+        <p>Tired of your long, ugly share link?</p>
+        <p>Paste it here, make it nice</p>
+      </div>
+    </div>
+    <div id="content-2">
+      <img src="./images/link.jpg" alt="'url" />
+      <h3>Shorten your Loooong Links :)</h3>
       <input id="original_url" type="text" placeholder="Enter the url" name="original_url" />
-      <button onclick="shortenUrl()">Submit</button>
+      <button onclick="shortenUrl()">Shorten it</button>
 
       <button onclick="get()">Get test</button>
+
+      <div id="tiny-url"></div>
+      <div id="output"></div>
+
+      <div>
+        <div id="error-message"></div>
+      </div>
     </div>
 
-    <div id="tiny-url"></div>
-    <div id="output"></div>
-
-    <div>
-      <div id="error-message"></div>
-    </div>
   </div>
 </body>
 
