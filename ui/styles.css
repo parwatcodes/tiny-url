@@ -110,6 +110,7 @@ img {
   cursor: pointer;
   border: 1.5px solid #ebe7e7;
   border-style: dashed;
+  pointer-events: none;
 }
 
 #tiny-url {

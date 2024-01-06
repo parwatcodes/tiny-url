@@ -15,6 +15,7 @@ async function shortenUrl() {
 
     const response = await fetch(url, requestOptions);
     const data = await response.json();
+    document.getElementById("output").style.pointerEvents = 'auto';
     document.getElementById("tiny-url").innerHTML = data.tiny_url;
     document.getElementById("copy-btn").innerText = 'Click to copy.'
 
