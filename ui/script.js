@@ -16,6 +16,15 @@ async function shortenUrl() {
     const response = await fetch(url, requestOptions);
     const data = await response.json();
     document.getElementById("tiny-url").innerHTML = data.tiny_url;
+    document.getElementById("copy-btn").innerText = 'Click to copy.'
+
+    var outputBtn = document.getElementById("output");
+
+    outputBtn.style.border = '1px solid #ebe7e7';
+    outputBtn.style.borderStyle = 'dashed';
+    copyBtn.innerText = "Click to copy.";
+    copyBtn.style.color = '#8c8a8a';
+
   } catch (error) {
     console.log('Error: ', error);
   }

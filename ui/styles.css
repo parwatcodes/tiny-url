@@ -73,6 +73,7 @@ img {
   outline: none;
   border: 1px solid #ebe7e7;
   border-radius: 5px;
+  padding: 5px;
 }
 
 #original_url::placeholder {
@@ -112,7 +113,7 @@ img {
 }
 
 #tiny-url {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   color: #222222;
 }
