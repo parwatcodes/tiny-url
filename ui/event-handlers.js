@@ -23,17 +23,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   outputBtn.addEventListener("click", function() {
-    var tiny_url = outputBtn.innerText;
-    var textarea = document.createElement("textarea");
+    var myDiv = document.getElementById('tiny-url');
 
-    textarea.value = tiny_url;
-    document.body.appendChild(textarea);
-    textarea.select();
-    textarea.setSelectionRange(0, 99999);
-
-    document.execCommand("copy");
-
-    document.body.removeChild(textarea);
+    var range = document.createRange();
+    range.selectNode(myDiv);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
 
     outputBtn.style.border = '1px solid green';
     outputBtn.style.borderStyle = 'dashed';
