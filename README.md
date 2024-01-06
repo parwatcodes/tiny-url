@@ -4,8 +4,7 @@
 
 TinyURL Shortener is a simple web application that allows you to shorten long URLs with ease. It comes with a beautiful user interface, URL validation checks, and a convenient "Copy to Clipboard" button for quick sharing.
 
-<img width="1007" alt="image" src="https://github.com/parwatcodes/tiny-url/assets/19905275/504f6c2d-b34f-48fa-b948-b642b7b9d060">
-
+<img width="1028" alt="image" src="https://github.com/parwatcodes/tiny-url/assets/19905275/114825a3-696a-4fd6-a653-7daeb2bdc5d1">
 
 ## Features
 
