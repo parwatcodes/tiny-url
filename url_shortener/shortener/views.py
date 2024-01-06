@@ -8,6 +8,7 @@ import random
 import string
 import json
 from django.views.decorators.csrf import csrf_exempt
+from django.shortcuts import redirect
 # Create your views here.
 # shortener/views.py
 from .models import ShortenedURL
@@ -18,11 +19,10 @@ def generate_unique_key(key_length = 10):
   return key
 
 class UrlShortenerView(View):
-  def init(self, request):
+  def init(self, request, short_code):
+    obj = ShortenedURL.objects.get(short_code = short_code)
 
-    return JsonResponse({
-      'message': 'Welcome to URL shortener API'
-    })
+    return redirect(obj.original_url)
 
   def get(self, request):
     try:
